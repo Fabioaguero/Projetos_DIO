@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Wrap</title>
+
+    <style>
+        .container {
+            display: flex;
+            border: 2px solid black;
+            height: 150px;
+            max-width: 300px;
+        }
+        
+        .item {
+            font-size: 24px;
+            height: 49%;
+            text-align: center;
+            min-width: 55px;
+            line-height: 50px;
+            color: red;
+            border: 1px solid gray;
+        }
+
+        .no-wrap {
+            flex-wrap: nowrap;
+        }
+
+        .wrap {
+            flex-wrap: wrap;
+        }
+
+        .wrap-reverse {
+            flex-wrap: wrap-reverse;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <h2>No-wrap</h2>
+    <!--Sem wrap os itens dentro do container passa pelos seus limetes de largura-->
+    <div class="no-wrap container">
+      
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        
+    </div>
+    
+
+    <h2>Wrap</h2>
+    <!--Com wrap os itens dentro do container chega ao seu limite de largura e o 
+        proximo item adicionado passa para a linha de baixo-->
+    <div class="wrap container">
+
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+
+    </div>
+
+    <h2>wrap-reverse</h2>
+    <!--Com wrap-reverso os itens dentro do container chega ao seu limite de largura e o 
+        proximo item adicionado passa para a linha de cima-->
+    <div class="wrap-reverse container">
+
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+
+    </div>
+
+    
+</body>
+</html>
